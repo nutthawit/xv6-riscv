@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug xv6 Kernel",
+            "targetCreateCommands": [
+                "target create ${workspaceFolder}/kernel/kernel"
+            ],
+            "processCreateCommands": [
+                "gdb-remote localhost:26000"
+            ],
+            "preLaunchTask": "Run QEMU GDB" // (ตัวเลือกเสริม) เพื่อให้รัน make qemu-gdb อัตโนมัติ
+        }
+    ]
+}
